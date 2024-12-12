@@ -1,0 +1,218 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: #ffecec;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#title {
+  font-family: "Playwrite IN Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Title Screen */
+#title-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #ffecec;
+}
+
+#title-screen h1 {
+  font-size: 3.5rem;
+  color: #ff4980;
+  margin-bottom: 20px;
+}
+
+#title-screen p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#title-screen button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: #ff4980;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#title-screen button:hover {
+  background-color: #e0366d;
+}
+
+/* Scene Container */
+#scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fffae5, #ffc6d9);
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10%; /* Added padding to avoid edge collisions */
+}
+
+/* Characters */
+#hello-kitty,
+#cinnamoroll {
+  position: relative;
+  width: 15%; /* Scaled relative to screen size */
+  text-align: center;
+}
+
+
+/* Adjust images within characters */
+#hello-kitty img {
+  width: 100%;
+  height: auto;
+}
+
+#cinnamoroll img {
+  width: 150%;
+  height: auto;
+}
+
+/* Speech Bubbles */
+.speech-bubble {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 200px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Specific Styles for Hello Kitty */
+#kitty-speech {
+  background-color: #ffdde5;
+  color: #ff4980;
+  font-size: larger;
+}
+
+#hello-kitty {
+  top: -50%;
+  left: -30%;
+}
+
+#cinnamoroll {
+  left: 5%;
+  top: -45%;
+}
+
+/* Specific Styles for Cinnamoroll */
+#cinnamoroll-speech {
+  background-color: #d5f7ff;
+  color: #4f92ff;
+  bottom: 80%;
+  font-size: larger;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 15%; /* Ensure the buttons are visible near the bottom */
+  padding: 0 10%; /* Padding to avoid being at screen edges */
+  z-index: 100; /* Ensure buttons are above other elements */
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff4980;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: #e0366d;
+}
+
+/* Fix for overlapping elements */
+#next-btn,
+#prev-btn {
+  position: relative;
+}
+
+#next-btn {
+  left: -50%;
+}
+
+/* Polaroid Slider */
+#polaroid-slider {
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Add spacing between Polaroids */
+  margin-top: 20px;
+}
+
+#polaroid-slider.visible {
+  opacity: 1; /* Fully opaque for the fade-in effect */
+}
+
+/* Polaroid Styles */
+.polaroid {
+  width: 220px; /* Increased width */
+  height: 300px; /* Increased height */
+  background: white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Crop overflowing parts of the image */
+  display: none; /* Initially hidden for sequential display */
+}
+
+.polaroid img {
+  width: 100%; /* Fill the container width */
+  height: 80%; /* Fill the container height */
+  object-fit: cover; /* Crop images to fit without distortion */
+  border-radius: 8px;
+}
+
+.floating-text {
+  animation: float 5s ease-in-out forwards;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, -100px); /* Adjust as needed */
+  }
+}

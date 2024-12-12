@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanrio Conversation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="scene">
+  
+    <div id="hello-kitty">
+      <img src="images/hello-kitty.png" alt="Hello Kitty">
+      <div class="speech-bubble" id="kitty-speech">I'm feeling a little sad...</div>
+    </div>
+
+
+    <div id="cinnamoroll">
+      <img src="images/cinnamoroll.png" alt="Cinnamoroll">
+      <div class="speech-bubble" id="cinnamoroll-speech">Don’t worry, I’m here for you!</div>
+    </div>
+  </div>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Oswald:wght@200..700&family=Playwrite+IN+Guides&family=Vibur&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Title Screen -->
+    <div id="title-screen">
+      <h1 id="title">Heyy Saimu Baby</h1>
+      <p>
+        Are you ready for the surprise? <br />
+        Click the button below to begin.
+      </p>
+      <button id="start-btn">Click to Start</button>
+    </div>
+
+    <!-- Scene -->
+    <div id="scene">
+      <!-- Cinnamoroll -->
+      <div id="cinnamoroll">
+        <img src="cinnamoroll.png" alt="Cinnamoroll" />
+        <div class="speech-bubble" id="cinnamoroll-speech"></div>
+      </div>
+
+      <!-- Hello Kitty -->
+      <div id="hello-kitty">
+        <img src="hello-kitty.png" alt="Hello Kitty" />
+        <div class="speech-bubble" id="kitty-speech"></div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- Polaroid Slider -->
+    <div id="polaroid-slider">
+      <div class="polaroid">
+        <img src="IMG_9881.JPEG.jpg" alt="Photo 1" />
+        <p>Here she is</p>
+      </div>
+      <div class="polaroid">
+        <img src="IMG_9393.JPG" alt="Photo 2" />
+        <p>the prettiest</p>
+      </div>
+      <div class="polaroid">
+        <img
+          src="465295256_577517968065926_3710296978865732102_n.jpg"
+          alt="Photo 3"
+        />
+        <p>girl</p>
+      </div>
+      <div class="polaroid">
+        <img src="IMG_9616.PNG" alt="Photo 4" />
+        <p>in the whole world.</p>
+      </div>
+      <div class="polaroid">
+        <img src="IMG_9671.JPG" alt="Photo 4" />
+        <p>saima didi❤️❤️</p>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </body>
+</html>
